@@ -3,9 +3,92 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C50EC60E-E6DE-45D5-8AB7-F7F3F3114759}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A4133084-B301-4D6D-887B-CA51937E05BB}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\docker-compose-ci.yml = .github\workflows\docker-compose-ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E6FE14DB-BA69-44BF-8D89-ACBB95AAC71D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{102F7507-BA94-4B7E-8936-477A7B23DEB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B072A526-C5AF-4D4C-8AAE-FFA151287135}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6813A593-318A-4C1E-BB01-FA85EBC792AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{5E04304A-CC78-493B-88F9-49DB1AAF2710}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{65985F93-8E82-4853-8A50-12B2746818AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{33DBAE14-8649-467F-8AD4-8BA946B311CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Systems", "Systems", "{6FEAC7FD-0967-4966-91EE-3CBA4C8DF4A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{04942F98-AC55-45CA-A539-5CD28D7D9041}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoPlotAnalyzer.API", "Systems\API\GeoPlotAnalyzer.API\GeoPlotAnalyzer.API.csproj", "{3CA8FD20-3E68-4DAF-973C-59CDEE1FE144}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docker", ".docker", "{C954E679-1B11-44C2-9534-B1C8E36C010C}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
+		env.api = env.api
+		env.data = env.data
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoPlotAnalyzer.Common", "Shared\GeoPlotAnalyzer.Common\GeoPlotAnalyzer.Common.csproj", "{7067FFF7-7858-465C-B4F2-A08FDC8376C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoPlotAnalyzer.Services.Logger", "Application\Services\GeoPlotAnalyzer.Services.Logger\GeoPlotAnalyzer.Services.Logger.csproj", "{440F9A2A-3C5E-4780-A3CC-E70C0775A881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoPlotAnalyzer.Services.Settings", "Application\Services\GeoPlotAnalyzer.Services.Settings\GeoPlotAnalyzer.Services.Settings.csproj", "{29C3F2DB-EBD9-4278-ADF0-793982D06CBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoPlotAnalyzer.Models", "Application\Models\GeoPlotAnalyzer.Models\GeoPlotAnalyzer.Models.csproj", "{872339E9-5F38-4EC3-9101-CCA0E4ED8DD3}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CA8FD20-3E68-4DAF-973C-59CDEE1FE144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA8FD20-3E68-4DAF-973C-59CDEE1FE144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA8FD20-3E68-4DAF-973C-59CDEE1FE144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA8FD20-3E68-4DAF-973C-59CDEE1FE144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7067FFF7-7858-465C-B4F2-A08FDC8376C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7067FFF7-7858-465C-B4F2-A08FDC8376C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7067FFF7-7858-465C-B4F2-A08FDC8376C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7067FFF7-7858-465C-B4F2-A08FDC8376C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440F9A2A-3C5E-4780-A3CC-E70C0775A881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440F9A2A-3C5E-4780-A3CC-E70C0775A881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440F9A2A-3C5E-4780-A3CC-E70C0775A881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440F9A2A-3C5E-4780-A3CC-E70C0775A881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C3F2DB-EBD9-4278-ADF0-793982D06CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C3F2DB-EBD9-4278-ADF0-793982D06CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C3F2DB-EBD9-4278-ADF0-793982D06CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C3F2DB-EBD9-4278-ADF0-793982D06CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{872339E9-5F38-4EC3-9101-CCA0E4ED8DD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{872339E9-5F38-4EC3-9101-CCA0E4ED8DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{872339E9-5F38-4EC3-9101-CCA0E4ED8DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{872339E9-5F38-4EC3-9101-CCA0E4ED8DD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A4133084-B301-4D6D-887B-CA51937E05BB} = {C50EC60E-E6DE-45D5-8AB7-F7F3F3114759}
+		{102F7507-BA94-4B7E-8936-477A7B23DEB9} = {E6FE14DB-BA69-44BF-8D89-ACBB95AAC71D}
+		{B072A526-C5AF-4D4C-8AAE-FFA151287135} = {E6FE14DB-BA69-44BF-8D89-ACBB95AAC71D}
+		{5E04304A-CC78-493B-88F9-49DB1AAF2710} = {6813A593-318A-4C1E-BB01-FA85EBC792AE}
+		{65985F93-8E82-4853-8A50-12B2746818AB} = {6813A593-318A-4C1E-BB01-FA85EBC792AE}
+		{04942F98-AC55-45CA-A539-5CD28D7D9041} = {6FEAC7FD-0967-4966-91EE-3CBA4C8DF4A0}
+		{3CA8FD20-3E68-4DAF-973C-59CDEE1FE144} = {04942F98-AC55-45CA-A539-5CD28D7D9041}
+		{7067FFF7-7858-465C-B4F2-A08FDC8376C3} = {33DBAE14-8649-467F-8AD4-8BA946B311CF}
+		{440F9A2A-3C5E-4780-A3CC-E70C0775A881} = {B072A526-C5AF-4D4C-8AAE-FFA151287135}
+		{29C3F2DB-EBD9-4278-ADF0-793982D06CBC} = {B072A526-C5AF-4D4C-8AAE-FFA151287135}
+		{872339E9-5F38-4EC3-9101-CCA0E4ED8DD3} = {102F7507-BA94-4B7E-8936-477A7B23DEB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FAAC1471-DEC3-48BC-95AA-43857165FB3B}
