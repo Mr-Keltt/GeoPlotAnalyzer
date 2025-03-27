@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  geo_plot_analyzer_postgresql:
+    image: postgis/postgis:latest
+    
+  geo_plot_analyzer_api:
+    image: ${DOCKER_REGISTRY-}geo-plot-analyzer-api
+    build:
+        context: .
+        dockerfile: Systems/API/GeoPlotAnalyzer.API/Dockerfile
+    depends_on:
+      - geo_plot_analyzer_postgresql
